@@ -95,12 +95,12 @@ class Carne extends AbstractPdf
         $this->SetX(21);
         $this->Cell(25, 5, fpdf_utf8("Nº da Parcela:"), '', 0, 'L', 0);
         $this->SetFont('Arial', 'U', 10);
-        $this->Cell(57, 5, str_limit(fpdf_utf8("{$parcela} / {$total_parcelas}"), 39, ''), '', 0, 'L', 0);
+        $this->Cell(57, 5, str_limit(fpdf_utf8("{$parcela}/{$total_parcelas}"), 39, ''), '', 0, 'L', 0);
         $this->SetX($this->GetX() + 9);
         $this->SetFont('Arial', 'B', 10);
         $this->Cell(25, 5, fpdf_utf8("Nº da Parcela:"), '', 0, 'L', 0);
         $this->SetFont('Arial', 'U', 10);
-        $this->Cell(57, 5, str_limit(fpdf_utf8("{$parcela} / {$total_parcelas}"), 39, ''), '', 1, 'L', 0);
+        $this->Cell(57, 5, str_limit(fpdf_utf8("{$parcela}/{$total_parcelas}"), 39, ''), '', 1, 'L', 0);
 
         $this->SetFont('Arial', 'B', 10);
         $this->SetX(21);
